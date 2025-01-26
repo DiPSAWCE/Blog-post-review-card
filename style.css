@@ -140,10 +140,126 @@ svg {
     margin-top: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    * {
-      width: 300px;
-      height: 450px;
+/* Base styles (Mobile First Approach) */
+:root {
+    --primary-color: #f4d04e;
+    --text-color: #000000;
+    --spacing-base: 16px;
+}
+
+/* Default styles for mobile devices */
+.container {
+    width: 90%; /* Use percentage for flexibility */
+    max-width: 336px;
+    margin: var(--spacing-base);
+    padding: var(--spacing-base);
+}
+
+/* Media Queries for different screen sizes */
+
+/* Small phones (320px and up) */
+@media screen and (min-width: 320px) {
+    .container {
+        width: 95%;
+        max-width: 300px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .author-name {
+        font-size: 12px;
+    }
+
+    #img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+@media screen and (min-width: 375px) {
+    .container {
+        max-width: 320px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (min-width: 425px) {
+    .container {
+        max-width: 336px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 336px;
+    }
+
+   
+    .content {
+        padding: calc(var(--spacing-base) * 1.5);
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 336px;
+        
+    }
+
+    
+    .title:hover {
+        color: var(--primary-color);
+        transition: color 0.3s ease;
+    }
+}
+
+
+@media screen and (min-width: 1440px) {
+    body {
+        
+        padding: calc(var(--spacing-base) * 2);
+    }
+}
+
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .container {
+        margin: var(--spacing-base) auto;
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), 
+       (min-resolution: 192dpi) {
+    
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
     }
   
     }
