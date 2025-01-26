@@ -5,8 +5,8 @@
 
 body {
     background-color: #f4d04e;
-    margin: 0; /* Remove default body margins */
-    min-height: 100vh; /* Ensure body covers full viewport height */
+    margin: 0;
+    min-height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@ body {
 
 #img-post-container {
     margin: 20px;
-    max-width: 90vw; /* Viewport width */
+    max-width: 90vw;
     max-height: 90vh;
     margin-left: 20px;
     width: 100%;
@@ -140,24 +140,24 @@ svg {
     margin-top: 20px;
 }
 
-/* Base styles (Mobile First Approach) */
+
 :root {
     --primary-color: #f4d04e;
     --text-color: #000000;
     --spacing-base: 16px;
 }
 
-/* Default styles for mobile devices */
+
 .container {
-    width: 90%; /* Use percentage for flexibility */
+    width: 90%; 
     max-width: 336px;
     margin: var(--spacing-base);
     padding: var(--spacing-base);
 }
 
-/* Media Queries for different screen sizes */
 
-/* Small phones (320px and up) */
+
+
 @media screen and (min-width: 320px) {
     .container {
         width: 95%;
